@@ -41,7 +41,7 @@ function sortTable(c) {
         for (co=0; co<columns; co++) { // cycle through columns
             // assign the value in each row-column to a 2d array by row-column
             if(c == 0){
-              arrTable[ro][co] = document.getElementsByTagName("sortable").rows[ro].cells[co].innerHTML;
+              arrTable[ro][co] = document.getElementsByTagName("a").rows[ro].cells[co].innerHTML;
             }
             else{
             arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
@@ -71,7 +71,11 @@ function sortTable(c) {
 
     // cycle through rows-columns placing values from the array back into the html table
     for (ro=0; ro<rows; ro++) {
-        for (co=0; co<columns; co++) {       
+        for (co=0; co<columns; co++) {    
+          if(c ==0){
+            document.getElementsByTagName("a").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+          }
+          else
             document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
           
         }
