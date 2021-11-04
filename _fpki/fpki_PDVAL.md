@@ -2,7 +2,7 @@
 layout: page
 collection: fpki
 title: Path Discovery and Validation
-permalink: /fpki/pdval/
+permalink: fpki/pdval/
 sticky_sidenav: true
 sidenav: fpki
 
